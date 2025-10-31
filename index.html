@@ -1,52 +1,57 @@
 <!doctype html>
 <html lang="en" data-theme="light">
+
   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="color-scheme" content="light dark">
-      <link rel="stylesheet" href="css/pico.min.css">
-      <link rel="stylesheet" href="css/pico.custom.css">
-      <title>Git Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/pico.custom.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Git Template</title>
   </head>
+
   <body>
-      <main class="container center">
-  
-          <section class="right space-y-2">
-              <input type="checkbox" id="darkmode">
-              <label for="darkmode" class="toggle"><span>Toggle dark mode</span></label>
-              <script>
-                  darkmode.onclick=darkmode.onchange=_=>document.documentElement.dataset.theme=darkmode.checked?'dark':'light';onload=darkmode.onclick;
-              </script>
-          </section>
-  
-          <section>
-              <img src="img/logo.jpeg" class="round thumb-5">
-              <br>
-              <br>
-              <p class="surtitle">Lamylab.github.io</p>
-              <h1 id="chapter-1">Lamylab</h1>
-          </section>
-  
-          <section class="clamp-2 space-y-2">
-              <br>
-              <p>The <a href="https://www.unige.ch/medecine/Lamylab">Lamylab</a> is interested in understanding the basic neurobiological mechanisms underlying emotions, cognition and behavior. We are more specifically looking at how neural circuits are affected
-                  by body physiological states and what role those interactions play in brain disorders.</p>
-              <p>contact: <a href="mailto:christophe.lamy@unige.ch">christophe.lamy@unige.ch</a></p>
-          </section>
-      </main>
-  
-      <footer class="clamp-3">
-          <br>
-          <hr>
-          <section class="grid clamp-2">
+
+    <main class="container center">
+      
+        <section class="right space-y-2">
+            <input type="checkbox" id="darkmode" >
+            <label for="darkmode" class="toggle"><span>Toggle dark mode</span></label>
+            <script>darkmode.onclick=darkmode.onchange=_=>document.documentElement.dataset.theme=darkmode.checked?'dark':'light';onload=darkmode.onclick;</script>
+        </section>
+    
+        <section>
+            <img src="img/logo.jpeg" class="round thumb-5">
+            <br><br>
+            <p class="surtitle">Lamylab.github.io</p>
+            <h1 id="chapter-1">Lamylab</h1>
+        </section>
+
+        <section class="clamp-2 space-y-2">
+           <br>
+            <p>The <a href="https://www.unige.ch/medecine/Lamylab">Lamylab</a> is interested in understanding the basic neurobiological mechanisms underlying emotions, cognition and behavior. We are more specifically looking at how neural circuits are affected by body physiological states and what role those interactions play in brain disorders.</p>        
+            <p><i data-feather="send"></i> <a href="mailto:christophe.lamy@unige.ch">christophe.lamy@unige.ch</a></p>
+        </section>
+
+    </main>
+
+    <footer class="clamp-3">
+
+      <br>
+      <hr>
+      <section class="grid clamp-2">
               <img src="img/fmed.png" class="thumb-6">
-              <address class="space-y-1 space-x-2">
-                    University of geneva © 2025 <br>
-                    Anatomie | CMU - D01.1758.A<br>
-                    Rue Michel-Servet 1<br>
-                    CH-1206 Geneva <br>
-                  </address>
-          </section>
-      </footer>
+                <address class="space-y-1 space-x-2">
+                  University of geneva © 2025 <br>
+                  Anatomie | CMU - D01.1758.A<br>
+                  Rue Michel-Servet 1<br>
+                  CH-1206 Geneva <br>
+                </address>
+      </section>
+
+    </footer>
+
+    <script>feather.replace();</script>
   </body>
 </html>
