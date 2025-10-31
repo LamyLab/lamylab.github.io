@@ -1,0 +1,348 @@
+
+/* POSITION CLASSES */
+
+
+.center{
+  text-align: center;
+}
+
+.right{
+  text-align: right;
+}
+
+.left{
+  text-align: left;
+
+}
+
+.justify{
+  text-align: justify;
+}
+
+.clamp-1{
+  max-width:24em;
+  margin:1em auto;
+}
+
+.clamp-2{
+  max-width: 32em;
+  margin:1em auto;
+}
+
+.clamp-3{
+  max-width: 48em;
+  margin:1em auto;
+}
+
+.size-1{
+  font-size: 0.7em;
+}
+
+.size-2{
+  font-size: 0.85em;
+}
+
+.size-3{
+  font-size: 1em;
+}
+
+.size-4{
+  font-size: 1.15em;
+}
+
+.size-5{
+  font-size: 1.3em;
+}
+
+.size-6{
+  font-size: 1.45em;
+}
+
+
+.thumb-1{
+  width: 2em;
+  height: auto;
+}
+
+.thumb-2{
+  width: 4em;
+  height: auto;
+}
+
+.thumb-3{
+  width: 6em;
+  height: auto;
+}
+
+.thumb-4{
+  width: 8em;
+  height: auto;
+}
+
+.thumb-5{
+  width: 10em;
+  height: auto;
+}
+
+.thumb-6{
+  width: 12em;
+  height: auto;
+}
+
+.thumb-7{
+  width: 14em;
+  height: auto;
+}
+
+.thumb-8{
+  width: 16em;
+  height: auto;
+}
+
+.space-y-1 {
+  padding-top: 0.5em ;
+  padding-bottom: 0.5em;
+}
+
+.space-y-2 {
+  padding-top: 1em ;
+  padding-bottom: 1em;
+}
+
+.space-y-3 {
+  padding-top: 1.5em ;
+  padding-bottom: 1.5em;
+}
+
+.space-x-1 {
+  padding-left: 0.5em ;
+  padding-right: 0.5em;
+}
+
+.space-x-2 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.space-x-3 {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+/* ROUND CLASSES */
+
+.round{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.rounded{
+    border-radius: (--pico-border-radius);
+    overflow: hidden;
+}
+
+/* TITLES CLASSES */
+
+h1{
+    margin-bottom: 0.55em;
+}
+
+section > h1 {
+margin-top: 0;
+}
+
+.surtitle{
+  color: var(--pico-primary);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .0625em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* IMAGES CLASSES */
+
+img {
+  margin: auto;
+}
+
+
+
+
+
+
+
+/* GENERAL PICO FRAMEWORK IMPROVMENT - Julien Da Costa 2025 ============================ */
+
+
+html, body{
+    scroll-behavior: smooth;
+    scroll-padding: 10%;
+    min-height: 100vh;
+}
+
+p{
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+p > a{
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+footer address{
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  line-height: 1.8em;
+  margin-bottom: 0 !important;
+}
+
+/* LAYOUT GRID  */
+
+@media (min-width:768px) {
+    .grid:has(aside){
+        grid-template-columns: 260px repeat(auto-fit,minmax(0%,1fr));
+    }
+
+    .grid > aside {
+        margin-right: 2em;
+    }
+
+    aside details > summary{
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+
+    aside details[open] > summary{
+        margin-bottom: 0.5em;
+    }
+
+
+    aside nav details ul, aside nav details ul:first-of-type{
+        font-size: 0.75em;
+        line-height: 0.7;
+        padding-left: 0.15em;
+        border-left: 1px solid var(--pico-muted-border-color);
+        margin-left: 0.1em;
+        color: var(--pico-secondary);
+    }
+
+    aside nav {
+        padding: 1em;
+        border-radius: var(--pico-border-radius);
+        background-color: var(--pico-card-sectioning-background-color);
+    }
+
+}
+
+@media (max-width:575px) {
+  .hide-before-sm {
+    display:none
+  }
+}
+
+
+/* HEADER */
+
+  body > header {
+    position: sticky;
+    margin-bottom: 2em;
+    background-color: var(--pico-card-sectioning-background-color);
+    box-shadow: 0 0.4375rem 1.375rem -0.25rem rgba(18,18,18,0.075);
+
+  }
+
+  body > header img {
+    height: 2.5em;
+    width: auto;
+    margin: -1em 1em -0.5em 1em;
+
+    }
+
+  body > header img + span {
+    font-size: 1.5em;
+    font-weight: 900;
+    }
+
+  body > header a {
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+
+
+
+
+/* TOGGLE DARKMODE */
+
+li:has(#darkmode-toggle){
+    box-sizing: content-box;
+}
+
+.toggle {
+  font-size: 0.65em; /* 👈 change this to scale */
+  border: 0.125em solid currentColor;
+  border-radius: 2em;
+  cursor: pointer;
+  display: block;
+  height: 2em;
+  position: relative;
+  width: 3.75em;
+  margin-bottom: -0.5em !important;  
+    box-sizing: content-box;
+}
+
+.toggle span {
+  background-color: currentColor;
+  border-radius: 2em;
+  display: block;
+  height: 1.5em;
+  left: 0.25em;
+  overflow: hidden;
+  position: absolute;
+  top: 0.25em;
+  text-indent: -9999px;
+  transition: left 0.25s;
+  width: 1.5em;
+  z-index: 2;
+}
+
+.toggle::before,
+.toggle::after {
+  content: "";
+  display: block;
+  border-radius: 1em;
+  position: absolute;
+  z-index: 1;
+  box-sizing: content-box;
+}
+
+.toggle::after {
+  box-shadow: 0.25em 0.25em var(--pico-color);
+  height: 1.125em;
+  right: 0.9em;
+  top: 0.125em;
+  width: 1.125em;
+}
+
+.toggle::before {
+  background-color: var(--pico-h1-color);
+  height: 0.625em;
+  outline: 0.25em dotted var(--pico-h1-color);
+  outline-offset: 0.125em;
+  left: 0.7em;
+  top: 0.7em;
+  width: 0.625em;
+}
+
+#darkmode:checked ~ .toggle span {
+  left: 2em;
+}
+
+#darkmode{
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
